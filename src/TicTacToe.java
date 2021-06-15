@@ -14,7 +14,7 @@ public class TicTacToe {
     public static void main (String [] args) {
     Scanner scan = new Scanner (System.in);
    
-           
+        System.out.println("Welcome to 3x3 Tic Tac Toe"); //added for commit #1
         
         char[][] board = {{' ', '|', ' ', '|', ' '}, 
                     	{'-', '-', '-', '-', '-'},
@@ -23,6 +23,8 @@ public class TicTacToe {
                     	{' ', '|', ' ', '|', ' '}};
          
         printBoard(board);
+        
+        System.out.println("X will play first. Enter a slot number to place X in: "); //added for commit #2
          
         //Player input
         while(true) {
