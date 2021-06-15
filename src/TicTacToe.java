@@ -25,7 +25,7 @@ public class TicTacToe {
         printBoard(board);
         
         System.out.println("X will play first. Enter a slot number to place X in: "); //added for commit #2
-         
+        
         //Player input
         while(true) {
             System.out.println("Enter numbers between 1 through 9 to move!");
