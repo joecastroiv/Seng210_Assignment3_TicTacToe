@@ -9,12 +9,18 @@ public class TicTacToe {
 
 	static ArrayList<Integer> userSpot = new ArrayList<Integer>();    
     static ArrayList<Integer> comSpots = new ArrayList<Integer>();
-    
+    static int playerWinCount = 0;
+	private static String playerName;
+    int computerWinCount = 0;
      
     public static void main (String [] args) {
     Scanner scan = new Scanner (System.in);
    
         System.out.println("Welcome to 3x3 Tic Tac Toe"); //added for commit #1
+        
+        System.out.println("What is your player name: ?"); //added for commit #3
+        String playerName = scan.next();
+        
         
         char[][] board = {{' ', '|', ' ', '|', ' '}, 
                     	{'-', '-', '-', '-', '-'},
@@ -24,8 +30,8 @@ public class TicTacToe {
          
         printBoard(board);
         
-        System.out.println("X will play first. Enter a slot number to place X in: "); //added for commit #2
-        
+        System.out.println("Lets begin " + playerName + " ,you will play first. Enter a slot number to place X in: "); //added for commit #2
+     
         //Player input
         while(true) {
             System.out.println("Enter numbers between 1 through 9 to move!");
@@ -66,6 +72,8 @@ public class TicTacToe {
                 break;
             }
         }
+        
+        
  
           }
     public static void placePiece(char[][] board, int spot, String user){
@@ -150,6 +158,8 @@ public class TicTacToe {
          
         for(List l : winning){
             if(userSpot.containsAll(l)){
+            	playerWinCount++;
+            	System.out.println("The player has won" + playerWinCount + " time(s)");
                 return "V-I-C-T-O-R-Y!";
             } 
             else if(comSpots.containsAll(l)){
@@ -158,8 +168,8 @@ public class TicTacToe {
             else if(userSpot.size() + comSpots.size() == 9){
                 return "Draw!";
             }
+       
         }
-         
         return "";       
     }
     
@@ -171,5 +181,6 @@ public class TicTacToe {
             System.out.println();
         }
     }
+    
 }
 
