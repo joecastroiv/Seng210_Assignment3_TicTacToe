@@ -10,8 +10,7 @@ public class TicTacToe {
 	static ArrayList<Integer> userSpot = new ArrayList<Integer>();    
     static ArrayList<Integer> comSpots = new ArrayList<Integer>();
     static int playerWinCount = 0;
-	private static String playerName;
-    int computerWinCount = 0;
+	int computerWinCount = 0;
      
     public static void main (String [] args) {
     Scanner scan = new Scanner (System.in);
@@ -158,8 +157,8 @@ public class TicTacToe {
          
         for(List l : winning){
             if(userSpot.containsAll(l)){
-            	playerWinCount++;
-            	System.out.println("The player has won" + playerWinCount + " time(s)");
+            	playerWinCount++; //commit #4 keep track of player wins and printout and increment
+            	System.out.println("The player has won " + playerWinCount + " time(s)");
                 return "V-I-C-T-O-R-Y!";
             } 
             else if(comSpots.containsAll(l)){
