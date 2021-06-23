@@ -164,7 +164,7 @@ public class TicTacToe {
             else if(comSpots.containsAll(l)){
             	computerWinCount++; //commit #5 keep track of computer wins, printout and increment
             	System.out.println("The computer has won " + computerWinCount + " time(s)");
-                return "Computer wins, you failed!";
+                return "Computer wins, you failed!, you suck!";  //another commit for remote repos test
             } 
             else if(userSpot.size() + comSpots.size() == 9){
                 return "Draw!";
