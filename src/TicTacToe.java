@@ -10,7 +10,7 @@ public class TicTacToe {
 	static ArrayList<Integer> userSpot = new ArrayList<Integer>();    
     static ArrayList<Integer> comSpots = new ArrayList<Integer>();
     static int playerWinCount = 0;
-	int computerWinCount = 0;
+	static int computerWinCount = 0;
      
     public static void main (String [] args) {
     Scanner scan = new Scanner (System.in);
@@ -157,11 +157,13 @@ public class TicTacToe {
          
         for(List l : winning){
             if(userSpot.containsAll(l)){
-            	playerWinCount++; //commit #4 keep track of player wins and printout and increment
+            	playerWinCount++; //commit #4 keep track of player wins, printout and increment
             	System.out.println("The player has won " + playerWinCount + " time(s)");
-                return "V-I-C-T-O-R-Y!";
+                return "V-I-C-T-O-R-Y!, yay you....";  //commit for remote repos test
             } 
             else if(comSpots.containsAll(l)){
+            	computerWinCount++; //commit #5 keep track of computer wins, printout and increment
+            	System.out.println("The computer has won " + computerWinCount + " time(s)");
                 return "Computer wins, you failed!";
             } 
             else if(userSpot.size() + comSpots.size() == 9){
