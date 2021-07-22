@@ -167,7 +167,7 @@ public class TicTacToe {
                 return "Computer wins, you failed!, you suck!";  //another commit for remote repos test
             } 
             else if(userSpot.size() + comSpots.size() == 9){
-                return "Draw!";
+                return "Draw! Try Again";
             }
        
         }
