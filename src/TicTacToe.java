@@ -20,6 +20,11 @@ public class TicTacToe {
         System.out.println("What is your player name: ?"); //added for commit #3
         String playerName = scan.next();
         
+        System.out.println("Shall we begin y/n?");
+        String playerAnswer = scan.next();
+        
+        if(playerAnswer == "y") {
+        
         
         char[][] board = {{' ', '|', ' ', '|', ' '}, 
                     	{'-', '-', '-', '-', '-'},
@@ -70,11 +75,17 @@ public class TicTacToe {
                 System.out.println(result);
                 break;
             }
+            else {
+            	System.out.println("come back again...");
+            }
         }
-        
-        
- 
+        }
+     
           }
+    
+    	
+    
+    
     public static void placePiece(char[][] board, int spot, String user){
          
         char piece = ' ';
